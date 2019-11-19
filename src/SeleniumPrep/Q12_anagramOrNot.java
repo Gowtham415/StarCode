@@ -10,6 +10,7 @@ public class Q12_anagramOrNot {
 	
 	
 	public static boolean anagramTest(String str1,String str2) {
+		
 		char[] chStr1=str1.toCharArray();
 		char[] chStr2=str2.toCharArray();
 		int strlen1=chStr1.length;
@@ -21,11 +22,11 @@ public class Q12_anagramOrNot {
 		
 		Arrays.sort(chStr1);
 		Arrays.sort(chStr2);
+		
 		for(int i=0;i<chStr1.length && i<chStr2.length;i++) {
 			if(chStr1[i]!=chStr2[i])
 				return false;
 		}
 		return true;	
 	}
-
 }

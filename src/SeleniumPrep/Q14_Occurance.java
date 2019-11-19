@@ -2,7 +2,6 @@ package SeleniumPrep;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class Q14_Occurance {
 //	14. In a String print the occurrence of each character.
