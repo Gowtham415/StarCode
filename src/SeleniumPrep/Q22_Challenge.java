@@ -7,7 +7,7 @@ public class Q22_Challenge {
 		String str= "sghjdfd1234th45syd";
 		String str1= str.replaceAll("\\D", "");
 		String str2= str.replaceAll("\\d", "");
-		System.out.println("Gievn String:"+str);
+		System.out.println("Given String:"+str);
 		System.out.println(str1);
 		System.out.println(str2);
 	}
