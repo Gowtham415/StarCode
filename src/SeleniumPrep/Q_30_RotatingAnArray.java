@@ -24,16 +24,13 @@ public class Q_30_RotatingAnArray {
 		int[] tempArry= new int[n];
 		for(int i=0;i<n;i++) {
 			tempArry[i]=arry[i];
-		}
-		
+		}	
 		for(int i=0;i<len-n;i++) {
 			arry[i]=arry[i+n];
 		}
-		
 		for(int i=0;i<n;i++) {
 			arry[(len-n)+i]=tempArry[i];
-		}
-		
+		}	
 		return arry;
 	}
 	
@@ -44,16 +41,13 @@ public class Q_30_RotatingAnArray {
 			int[] tempArry= new int[n];
 			for(int i=0;i<n;i++) {
 				tempArry[i]=arry[len-(n-i)];
-			}
-			
+			}	
 			for(int i=0;i<len-n;i++) {
 				arry[(len-1)-i]=arry[(len-1)-(n+i)];	
 			}
-			
 			for(int i=0;i<n;i++) {
 				arry[i]=tempArry[i];
-			}
-			
+			}	
 			return arry;
 		}
 	

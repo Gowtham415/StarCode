@@ -23,12 +23,24 @@ public class Q3_FibonocciDemo{
 	public static int fibo2(int n) {
 		int a =0;
 		int b =1;
-		int sum=0;
+		int c=0;
 		for(int i=2;i<n;i++) {
-			sum=a+b;
+			c=a+b;
 			a=b;
-			b=sum;
+			b=c;
 		}
-		return sum;
+		return c;
 	}
+	
+	//Fobonocci Series using Recursion
+//	
+//	public static int fibo3(int n) {
+//		if(n<=1) {
+//			return n;
+//		}
+//		return fibo3();
+//		
+//	}
+	
+	
 }
