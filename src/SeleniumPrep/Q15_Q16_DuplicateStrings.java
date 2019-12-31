@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Q15_Q16_DuplicateStrings {
-//	In a Statement check how any duplicate strings are there and remove them.
+//	In a Statement check how any duplicate words are there and remove them.
 	public static void main(String[] args) {
 		String s = "This is a new addiction and this is a new world of addiction";
 		duplicateStrings(s);
@@ -28,7 +28,7 @@ public class Q15_Q16_DuplicateStrings {
 			System.out.println("'"+s.getKey()+"'"+" is appeared "+s.getValue()+" time/s");
 			sb.append(s.getKey()+" ");
 		}
-		
+		System.out.println("New Statement is:");
 		System.out.println(sb.toString());	
 	}
 
