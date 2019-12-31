@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-public class Palindrome {
+public class Q36_NearestPalindrome {
 
 	public static void main(String[] args) {
 		System.out.println(isPalindrome(1441));
@@ -9,6 +9,33 @@ public class Palindrome {
 		System.out.println(isArmstrong(153));
 
 	}
+	
+	// To check the nearest palindrome of a given number
+
+		public static int nearestpalindrome(int n) {
+			int lowerBound;
+			int UpperBound;
+			for (int i = n;; i--) {
+				if (isPalindrome(i)) {
+					lowerBound = i;
+					break;
+				}
+			}
+			for (int i = n;; i++) {
+				if (isPalindrome(i)) {
+					UpperBound = i;
+					break;
+				}
+			}
+
+			if (Math.abs(n - lowerBound) > Math.abs(UpperBound - n)) {
+				return UpperBound;
+			} else if (Math.abs(n - lowerBound) < Math.abs(UpperBound - n)) {
+				return lowerBound;
+			} else {
+				return UpperBound;
+			}
+		}
 
 // To check if a number is a palindrome or not.	
 	public static boolean isPalindrome(int n) {
@@ -50,30 +77,5 @@ public class Palindrome {
 		return (sum==temp);
 	}
 
-// To check the nearest palindrome of a given number
 
-	public static int nearestpalindrome(int n) {
-		int lowerBound;
-		int UpperBound;
-		for (int i = n;; i--) {
-			if (isPalindrome(i)) {
-				lowerBound = i;
-				break;
-			}
-		}
-		for (int i = n;; i++) {
-			if (isPalindrome(i)) {
-				UpperBound = i;
-				break;
-			}
-		}
-
-		if (Math.abs(n - lowerBound) > Math.abs(UpperBound - n)) {
-			return UpperBound;
-		} else if (Math.abs(n - lowerBound) < Math.abs(UpperBound - n)) {
-			return lowerBound;
-		} else {
-			return UpperBound;
-		}
-	}
 }
