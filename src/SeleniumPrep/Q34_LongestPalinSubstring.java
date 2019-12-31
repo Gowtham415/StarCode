@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-//Java Solution 
+//Java Solution using dynamic programming
 public class Q34_LongestPalinSubstring {
 
 	// Driver program to test above functions

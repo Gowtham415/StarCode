@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Q25_DiffWaysItrArry {
+public class Q25_IteratingAnArray {
 //Different ways to iterate through an Array
 	public static void main(String[] args) {
 
@@ -38,7 +38,6 @@ public class Q25_DiffWaysItrArry {
 			k++;
 		}while(k<len);
 		
-
 	}
 
 }
