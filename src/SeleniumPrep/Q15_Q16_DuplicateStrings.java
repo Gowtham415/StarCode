@@ -31,5 +31,4 @@ public class Q15_Q16_DuplicateStrings {
 		System.out.println("New Statement is:");
 		System.out.println(sb.toString());	
 	}
-
 }

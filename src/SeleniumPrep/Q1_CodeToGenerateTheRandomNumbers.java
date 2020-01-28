@@ -7,8 +7,7 @@ import java.util.stream.IntStream;
 public class Q1_CodeToGenerateTheRandomNumbers {
 
 	public static void main(String[] args) {
-		
-		
+
 		//Approach 1 using Random class in JAVA.util
 		Random rn = new Random();
 		
@@ -20,7 +19,6 @@ public class Q1_CodeToGenerateTheRandomNumbers {
 		System.out.println(d);
 		
 		//Approach 2 using the Math.random()
-		
 		Double d1 = Math.random()*1000;
 		System.out.println(Math.round(d1));
 		

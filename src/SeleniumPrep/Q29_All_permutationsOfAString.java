@@ -7,7 +7,7 @@ import java.util.Set;
 //given string. 
 public class Q29_All_permutationsOfAString {
 	public static void main(String[] args) {
-		String str = "ABC";
+		String str = "ABCD";
 		int n = str.length();
 		Q29_All_permutationsOfAString permutation = new Q29_All_permutationsOfAString();
 		permutation.permute(str, 0, n - 1);
@@ -27,7 +27,6 @@ public class Q29_All_permutationsOfAString {
 			for (int i = l; i <= r; i++) {
 				str = swap(str, l, i);
 				permute(str, l + 1, r);
-				str = swap(str, l, i);
 			}
 		}
 	}
@@ -49,7 +48,6 @@ public class Q29_All_permutationsOfAString {
 		return String.valueOf(charArray);
 	}
 
-	
 	//Method 2
 	private static Set<String> getPerm(String str) {
 		 Set<String> perm = new HashSet<String>();

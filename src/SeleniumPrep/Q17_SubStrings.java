@@ -39,6 +39,5 @@ public class Q17_SubStrings {
 				break;
 			}
 		}
-
 	}
 }

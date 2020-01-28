@@ -7,11 +7,9 @@ import java.util.Map;
 public class Q23_StringsChallenge {
 //23. Print the count of each character repeated in string?
 	public static void main(String[] args) {
-
 		getCharCount("test");
-
 	}
-
+	
 	public static void getCharCount(String str) {
 
 		StringBuffer sb = new StringBuffer();
@@ -33,18 +31,23 @@ public class Q23_StringsChallenge {
 			System.out.println(s.getKey() + " :  " + s.getValue());
 		}
 	}
-
-//	public static void getrepetitiveCharCount(String str) {
-//		int count=1;
-//		char[] chArray = str.toCharArray();
-//		for(int i=0;i< chArray.length;i++) {			
-//			for(int j=i+1;j<chArray.length;j++) {	
-//				if(chArray[i]==chArray[j]) {
-//					count++;
-//				}
-//			}
-//			System.out.println(chArray[i]+": "+count);
-//			count=1;
-//		}
+	
+	public static void getCharCount2(String str) {
+		char[] charArry = str.toCharArray();
+		Map<Character,Integer> charMap = new HashMap<Character,Integer>();
+		int count=0;
+		for(char c:charArry) {
+			if(charMap.containsKey(c)) {
+				count = charMap.get(c)+1;
+				charMap.put(c, count);
+			}else {
+				charMap.put(c, 1);
+			}
+		}
+		
+		for (Map.Entry<Character, Integer> s : charMap.entrySet()) {
+			System.out.println(s.getKey() + " :  " + s.getValue());
+		}
+	}
 
 }

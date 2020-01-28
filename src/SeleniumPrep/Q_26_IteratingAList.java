@@ -41,7 +41,6 @@ public class Q_26_IteratingAList {
 		}
 		
 	// Using Iterator 
-		
 		static void method4(List<Integer> list) {
 			Iterator<Integer> itr = list.iterator();
 			while(itr.hasNext()) {

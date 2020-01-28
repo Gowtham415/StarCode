@@ -14,8 +14,7 @@ public class Q35_IteratingMap {
 		testMap.put("Python", 3);
 		testMap.put("PyCharm", 4);
 		testMap.put("Eclipse", 5);
-		testMap.put("TestNg", 6);
-		
+		testMap.put("TestNg", 6);	
 		iterateMap(testMap);
 	}
 

@@ -12,14 +12,10 @@ public class Q37_DupsInArry_WO_Collections {
 		int len = arry.length;
 
 		for (int i = 0; i < len; i++) {
-			int dup = -1;
 			for (int j = i + 1; j < len; j++) {
 				if (arry[i] == arry[j]) {
-					dup = arry[i];
+					System.out.println(arry[i]);
 				}
-			}
-			if (dup != -1) {
-				System.out.println(dup);
 			}
 		}
 	}

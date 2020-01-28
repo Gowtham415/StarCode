@@ -18,15 +18,12 @@ public class Q28_IndexOfNthCharInString {
 				count++;
 				if (count == n) {
 					return idx;
-				} else {
-					continue;
-				}
+				} 
 			}
 
 		} else if (n == 1) {
 			return idx;
 		}
 		return -1;
-
 	}
 }

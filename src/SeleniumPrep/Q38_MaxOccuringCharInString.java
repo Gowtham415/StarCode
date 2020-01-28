@@ -26,7 +26,6 @@ public class Q38_MaxOccuringCharInString {
 				result = str.charAt(i);
 			}
 		}
-
 		return result;
 	}
 }

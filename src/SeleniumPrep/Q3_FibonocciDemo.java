@@ -15,9 +15,9 @@ public class Q3_FibonocciDemo {
 		System.out.print(a + " " + b + " ");
 		while ((a + b) < n) {
 			c = a + b;
-			System.out.print(c + " ");
 			a = b;
 			b = c;
+			System.out.print(c + " ");
 		}
 	}
 
