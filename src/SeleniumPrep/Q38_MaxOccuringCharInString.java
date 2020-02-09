@@ -3,12 +3,12 @@ package SeleniumPrep;
 public class Q38_MaxOccuringCharInString {
 
 	public static void main(String[] args) {
-		String str = "geeksforgeeks";
+		String str = "paanjkdaeghhhh";
 		System.out.println(maxOccurinhCharInString(str));
 	}
 
 	static char maxOccurinhCharInString(String str) {
-		char[] chArry = new char[256];// 256 is maxmimum ASCII values can range upto
+		int[] chArry = new int[256];// 256 is maxmimum ASCII values can range upto
 		int len = str.length();
 
 		for (int i = 0; i < len; i++) {

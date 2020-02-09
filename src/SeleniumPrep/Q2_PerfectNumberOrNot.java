@@ -3,7 +3,7 @@ package SeleniumPrep;
 public class Q2_PerfectNumberOrNot {
 
 	public static void main(String[] args) {
-		System.out.println(perfectOrNot(8128));
+		System.out.println(perfectOrNot(6));
 		listOfPerfectNumbers(10000);
 	}
 
@@ -13,7 +13,7 @@ public class Q2_PerfectNumberOrNot {
 			return false;
 		}
 
-		for (int i = 1; i <= n / 2; i++) {
+		for (int i = 1; i <= n/2; i++) {
 			if (n % i == 0) {
 				sum += i;//1,
 			}

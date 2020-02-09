@@ -22,13 +22,9 @@ public class Q20_Read_Write_Files {
 
 		String line = null;
 		try (BufferedReader bis = new BufferedReader(new FileReader(new File(filePath)))) {
-			line = bis.readLine();
-			while (line != null) {
+			;
+			while ((line = bis.readLine()) != null) {
 				System.out.println(line);
-				line = bis.readLine();
-				if (line == null) {
-					break;
-				}
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -49,4 +45,5 @@ public class Q20_Read_Write_Files {
 			e.printStackTrace();
 		}
 	}
+	
 }

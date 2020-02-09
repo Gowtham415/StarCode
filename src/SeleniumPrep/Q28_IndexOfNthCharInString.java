@@ -14,7 +14,7 @@ public class Q28_IndexOfNthCharInString {
 		int count = 0;
 		if (n > 1 && idx != -1) {
 			count = 1;
-			while ((idx = str.indexOf(ch, idx + 1)) > -1) {
+			while ((idx = str.indexOf(ch, idx + 1)) != -1) {
 				count++;
 				if (count == n) {
 					return idx;
