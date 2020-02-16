@@ -28,6 +28,7 @@ public class Challenges1 {
 		}
 		return s;
 	}
+	
 	// Java  program to find triplets in a given 
 	// array whose sum is zero 	
 	static void cominationoOfNumWithSumAsZero(int[] arry) {
@@ -51,6 +52,7 @@ public class Challenges1 {
 			}
 		}
 	}
+	
 	//column with maximum zeros
 	static int columnWithMaxZero(int a[][],int n){
         int arr[] = new int[n];
