@@ -21,6 +21,7 @@ public class Q_31_MissingWords {
 			for (int i = 0; i < strArry2.length; i++) {
 				if (strTemp.equals(strArry2[i])) {
 					exists = true;
+					break;
 				}
 			}
 			if (!exists) {
