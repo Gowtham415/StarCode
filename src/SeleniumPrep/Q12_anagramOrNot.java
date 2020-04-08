@@ -5,10 +5,11 @@ import java.util.Arrays;
 public class Q12_anagramOrNot {
 
 	public static void main(String[] args) {
-		System.out.println(anagramTest("tester","resetrt"));
+		System.out.println(anagramTest("tester","ertest"));
+		System.out.println(anagramTest2("tester","resett"));
 	}
 	
-	
+	// Method 1 
 	public static boolean anagramTest(String str1,String str2) {
 		
 		char[] chStr1=str1.toCharArray();
@@ -28,5 +29,24 @@ public class Q12_anagramOrNot {
 				return false;
 		}
 		return true;	
+	}
+	
+	
+	//Method2
+	
+	public static boolean anagramTest2(String str1,String str2) {
+		int strlen1=str1.length();
+		int strlen2=str2.length();
+		if(strlen1!=strlen2) {
+			return false;
+		}
+		
+		StringBuffer sb = new StringBuffer(str1);
+		for(int i=0;i<str2.length();i++) {
+			int j =sb.toString().indexOf(str2.charAt(i));
+			sb.deleteCharAt(j);
+		}
+		
+		return sb.toString().isEmpty();
 	}
 }
