@@ -10,12 +10,12 @@ public class Q4_FactorialofNumber {
 	
 	
 	public static int factorialDemo(int n) {
-		int sum =1;
-		while(n>=1) {
-			sum = sum * n;
+		int fact = 1;
+		while(n>0) {
+			fact = fact * n;
 			n--;
 		}
-		return sum;
+		return fact;
 	}
 	
 	public static int factorialDemo2(int n) {

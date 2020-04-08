@@ -3,7 +3,7 @@ package SeleniumPrep;
 import java.util.Arrays;
 
 //To find largest two numbers of an Array
-public class Q7_FindTheLargestTwoNunberOfAnArray {
+public class Q7_FindTheLargestTwoNumberOfAnArray {
 
 	public static void main(String[] args) {
 		int arry[] = {24,45,3,56,789,78,99,34};
@@ -27,7 +27,7 @@ public class Q7_FindTheLargestTwoNunberOfAnArray {
 		for(int i=0;i<arr.length;i++) {
 			System.out.println(arr[i]);
 		}
-		Arrays.sort(arr);
+		
 		System.out.println("First Highest number is "+arr[arr.length-1]);
 		System.out.println("Second highest number is "+arr[arr.length-2]);
 	}

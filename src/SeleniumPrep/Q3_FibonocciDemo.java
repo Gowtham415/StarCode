@@ -4,7 +4,7 @@ public class Q3_FibonocciDemo {
 	public static void main(String[] args) {
 		oneToN(10);
 		System.out.println();
-		System.out.println(fibo2(5));
+		System.out.println(fibo2(3));
 	}
 
 	// Fibonocci series below 10.
