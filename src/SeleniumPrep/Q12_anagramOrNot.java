@@ -20,17 +20,14 @@ public class Q12_anagramOrNot {
 		if(strlen1!=strlen2) {
 			return false;
 		}
-		
 		Arrays.sort(chStr1);
 		Arrays.sort(chStr2);
-		
 		for(int i=0;i<chStr1.length && i<chStr2.length;i++) {
 			if(chStr1[i]!=chStr2[i])
 				return false;
 		}
 		return true;	
 	}
-	
 	
 	//Method2
 	

@@ -4,7 +4,7 @@ public class Q17_SubStrings {
 
 	public static void main(String[] args) {
 //		allSubStrings("Gowtham");
-		isASubString("tor","geeksforgeeks");
+		isASubString("geeks","geeksforgeeks");
 	}
 	// Java program to print all substrings of a string
 
@@ -24,20 +24,23 @@ public class Q17_SubStrings {
 	private static void isASubString(String s1, String s2) {
 		int s1_len = s1.length();// Small String
 		int s2_len = s2.length();// Large String
+		boolean isSubstring=false;
 		for (int i = 0; i < s2_len - s1_len; i++) {
 			int j;
-			for (j = 0; j < s1_len; j++) {
-				if (s2.charAt(i + j) != s1.charAt(j)) {
+			for(j=0;j<s1_len;j++) {
+				if(s2.charAt(i+j)==s1.charAt(j)) {
+					continue;
+				}else {
 					break;
 				}
 			}
-			if (j == s1_len) {
-				System.out.println(s1+" is a sub string of "+s2);
-				break;
-			}else {
-				System.out.println(s1+" is not a sub string of "+s2);
+			
+			if(j==s1_len) {
+				isSubstring=true;
 				break;
 			}
 		}
+		
+		System.out.println(isSubstring);
 	}
 }
