@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-public class Q_30_RotatingAnArray {
+public class Q30_RotatingAnArray {
 	
 	public static void main(String[] args) {
 		

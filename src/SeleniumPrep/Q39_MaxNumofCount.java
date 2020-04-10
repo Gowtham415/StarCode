@@ -2,7 +2,7 @@ package SeleniumPrep;
 
 import java.util.Arrays;
 
-public class Q_39_MaxNumofCount {
+public class Q39_MaxNumofCount {
 	// 39. WAP to Find the Maximum that can be played in 20 min if the duration of
 	// songs are in an Array {2,4,5,8,4,,10,7,5}
 	public static void main(String[] args) {

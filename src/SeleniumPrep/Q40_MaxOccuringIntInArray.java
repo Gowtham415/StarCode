@@ -9,7 +9,7 @@ import java.util.Set;
 /*
  * 40. WAP to print the maximum occuring integer in an Array with number of Occurances.
  */
-public class Q_40_MaxOccuringIntInArray {
+public class Q40_MaxOccuringIntInArray {
 
 	public static void main(String[] args) {
 		int[] intArray = { 2, 4, 5, 8, 4, 3, 10, 7, 5 };

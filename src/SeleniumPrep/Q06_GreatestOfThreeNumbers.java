@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-public class Q6_GreatestOfThreeNumbers {
+public class Q06_GreatestOfThreeNumbers {
 
 	public static void main(String[] args) {
 		System.out.println(greatestOfThreeNum(-997, 3676, 666));

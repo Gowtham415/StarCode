@@ -23,17 +23,18 @@ public class Q24_OddSum {
 	}
 
 	public static List<Integer> getoddSum(List<Integer> arry) {
-		int OddSum = 0;
-		List<Integer> oddList = new ArrayList<Integer>(arry.size());
-		for (Integer i : arry) {
-			for (int j = 1; j <= i; j++) {
-				if (j % 2 == 1) {
-					OddSum = OddSum + j;
+		int sum=0;
+		List<Integer> ol = new ArrayList<Integer>();
+		for(Integer i:arry) {
+			for(int j=1;j<=i;j++) {
+				if(j%2==1) {
+					sum+=j;
 				}
-			}
-			oddList.add(OddSum);
-			OddSum = 0;
+			}	
+			ol.add(sum);
+			sum=0;
 		}
-		return oddList;
+		
+		return ol;
 	}
 }

@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-public class Q_41_TransposeOfMatrix {
+public class Q41_TransposeOfMatrix {
 
 	public static void main(String[] args) {
 		

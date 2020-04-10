@@ -2,7 +2,7 @@ package SeleniumPrep;
 
 import java.util.Arrays;
 
-public class Q_33_Anagrams_Strings {
+public class Q33_Anagrams_Strings {
 
 	public static void main(String[] args) {
 		anagramStringOrNot("Anagram", "gramana");

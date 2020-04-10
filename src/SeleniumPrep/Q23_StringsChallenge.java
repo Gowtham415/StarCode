@@ -19,7 +19,6 @@ public class Q23_StringsChallenge {
 			if (sb.toString().indexOf(ch) == -1) {
 				sb.append(ch);
 				charMap.put(ch, 1);
-//				System.out.println(sb.toString());
 			} else if (sb.toString().indexOf(ch) != -1) {
 				int count = charMap.get(ch);
 				count = count + 1;

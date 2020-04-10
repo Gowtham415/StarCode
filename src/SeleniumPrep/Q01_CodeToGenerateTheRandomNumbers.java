@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-public class Q1_CodeToGenerateTheRandomNumbers {
+public class Q01_CodeToGenerateTheRandomNumbers {
 
 	public static void main(String[] args) {
 

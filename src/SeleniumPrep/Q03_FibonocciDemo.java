@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-public class Q3_FibonocciDemo {
+public class Q03_FibonocciDemo {
 	public static void main(String[] args) {
 		oneToN(10);
 		System.out.println();

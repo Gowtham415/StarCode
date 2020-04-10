@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-public class Q2_PerfectNumberOrNot {
+public class Q02_PerfectNumberOrNot {
 
 	public static void main(String[] args) {
 		System.out.println(perfectOrNot(6));

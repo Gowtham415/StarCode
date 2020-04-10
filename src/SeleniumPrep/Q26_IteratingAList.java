@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Q_26_IteratingAList {
+public class Q26_IteratingAList {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> intArrList= new ArrayList<>();
@@ -48,5 +48,6 @@ public class Q_26_IteratingAList {
 			}
 			
 		}
+		
 
 }

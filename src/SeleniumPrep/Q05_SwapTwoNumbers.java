@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-public class Q5_SwapTwoNumbers {
+public class Q05_SwapTwoNumbers {
 // Swap two numbers without using third variable.
 	public static void main(String[] args) {
 		swapTwo(65, 24);

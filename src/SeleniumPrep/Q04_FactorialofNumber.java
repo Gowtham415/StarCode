@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-public class Q4_FactorialofNumber {
+public class Q04_FactorialofNumber {
 
 	public static void main(String[] args) {
 		System.out.println(factorialDemo(5));

@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-public class Q8_Q9_Q10_Palindromes {
+public class Q08_Q09_Q010_Palindromes {
 
 	public static void main(String[] args) {
 		ReverseOfNumber(145);

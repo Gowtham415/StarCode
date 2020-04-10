@@ -1,7 +1,7 @@
 package SeleniumPrep;
 
 //31. Find the missing words by comparing one string with other.
-public class Q_31_MissingWords {
+public class Q31_MissingWords {
 
 	public static void main(String[] args) {
 
