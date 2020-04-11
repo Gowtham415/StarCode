@@ -17,7 +17,7 @@ public class Q38_MaxOccuringCharInString {
 			// comes up in the traversal of string
 		}
 
-		int max = -1;
+		int max = Integer.MIN_VALUE;
 		char result = ' ';
 
 		for (int i = 0; i < len; i++) {
