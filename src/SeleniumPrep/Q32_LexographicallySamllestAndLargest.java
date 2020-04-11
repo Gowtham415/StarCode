@@ -19,6 +19,7 @@ public class Q32_LexographicallySamllestAndLargest {
 
 		for (int i = k; i < s.length(); i++) {
 			baseStr = baseStr.substring(1, k) + s.charAt(i);// Forming a new string of new length k
+			System.out.println(baseStr);
 			if (smallest.compareTo(baseStr) > 0) {
 				smallest = baseStr;
 			}

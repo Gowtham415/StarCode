@@ -5,6 +5,10 @@ public class Q30_RotatingAnArray {
 	public static void main(String[] args) {
 		
 		int[] tempArry= {0,1,2,3,4,5,6,7,8,9};
+		for(int i:tempArry) {
+			System.out.print(i+" ");
+		}
+		System.out.println("");
 		tempArry= leftRotateArray(tempArry,3);
 		for(int i:tempArry) {
 			System.out.print(i+" ");
@@ -43,7 +47,7 @@ public class Q30_RotatingAnArray {
 				tempArry[i]=arry[len-(n-i)];
 			}	
 			for(int i=0;i<len-n;i++) {
-				arry[(len-1)-i]=arry[(len-1)-(n+i)];	
+				arry[(len-1)-i]= arry[(len-1)-(n+i)];	
 			}
 			for(int i=0;i<n;i++) {
 				arry[i]=tempArry[i];

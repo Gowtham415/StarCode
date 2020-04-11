@@ -11,6 +11,14 @@ public class Q29_All_permutationsOfAString {
 		int n = str.length();
 		Q29_All_permutationsOfAString permutation = new Q29_All_permutationsOfAString();
 		permutation.permute(str, 0, n - 1);
+		
+		System.out.println("#######################################################");
+		int c=0;
+		for(String s:getPerm("15263")) {
+			System.out.println(s);
+			c++;
+		}
+		System.out.println("Total Combinations:"+c);
 	}
 
 	/**

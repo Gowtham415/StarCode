@@ -32,7 +32,7 @@ public class Q40_MaxOccuringIntInArray {
 			}
 		}
 
-		int maxCount = 0;
+		int maxCount = Integer.MIN_VALUE;
 		int maxVal = -1;
 
 		for (Entry<Integer, Integer> e : data.entrySet()) {
