@@ -5,6 +5,7 @@ public class Q03_FibonocciDemo {
 		oneToN(10);
 		System.out.println();
 		System.out.println(fibo2(3));
+		System.out.println(fibo3(5));
 	}
 
 	// Fibonocci series below 10.
@@ -13,8 +14,7 @@ public class Q03_FibonocciDemo {
 		int b = 1;
 		int c = 0;
 		System.out.print(a + " " + b + " ");
-		while ((a + b) < n) {
-			c = a + b;
+		while ((c=(a + b)) <= n) {
 			a = b;
 			b = c;
 			System.out.print(c + " ");
@@ -36,9 +36,15 @@ public class Q03_FibonocciDemo {
 
 	// Fobonocci Series using Recursion
 
-//	public static int fibo3(int n) {
-//		return fibo3();
-//
-//	}
+	public static int fibo3(int n) {
+		if(n<0) {
+			return -1;
+		}else if(n==1 || n==2) {
+			return n-1;
+		}else {
+			return fibo3(n-1)+fibo3(n-2);
+		}
+
+	}
 
 }
