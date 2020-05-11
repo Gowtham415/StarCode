@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Q37_DupsInArry_WO_Collections {
 
 	public static void main(String[] args) {
-		int[] arry = { 2, 23, 2, 4, 56, 13, 24, 11, 1,2, 4 };
+		int[] arry = { 2, 23, 2, 4, 56, 13, 24, 11, 1,2, 4,11 };
 		maxOccuirngIntInAnArray(arry);
 	}
 	
@@ -24,30 +24,25 @@ public class Q37_DupsInArry_WO_Collections {
 				}
 			}
 		}
-		
+		// 2 2 2 4 4
 		
 		//After sorting
 		int numDup = 0, dupCount = 0;
-		int previous = -1;
+		int previous = Integer.MIN_VALUE;
 		for (int i=0; i < numbers.length; ++i) {
 		    if (numbers[i] == previous) {
-		        ++numDup;// This variable is required because if same number is repeated third time it will not be printed	
-		        if (numDup == 1) {
 		            ++dupCount;
 		            if (dupCount == 1) {
-		                System.out.print(numbers[i]);
+		                System.out.print(numbers[i]+" ");
+		                numDup++;
 		            }
-		            else {
-		                System.out.print(", " + numbers[i]);
-		            }
-		        }
 		    }
 		    else {
 		        previous = numbers[i];
-		        numDup = 0;
+		        dupCount=0;
 		    }
 		}
 
-		System.out.println("\nNumber of duplicates values: " + dupCount);
+		System.out.println("\nNumber of duplicates values: " + numDup);
 	}
 }
