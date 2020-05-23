@@ -6,7 +6,7 @@ public class Q12_anagramOrNot {
 
 	public static void main(String[] args) {
 		System.out.println(anagramTest("tester","ertest"));
-		System.out.println(anagramTest2("tester","resett"));
+		System.out.println(anagramTest2("tester","resetfdt"));
 	}
 	
 	// Method 1 

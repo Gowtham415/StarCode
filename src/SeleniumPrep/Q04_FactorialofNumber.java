@@ -19,11 +19,10 @@ public class Q04_FactorialofNumber {
 	}
 	
 	public static int factorialDemo2(int n) {
-		int fact=1;
 		if(n==0)
 			return 1;
-		fact = n * factorialDemo2(n-1);
-		return fact;
+		return n * factorialDemo2(n-1);
+		 
 	}
 	
 

@@ -67,7 +67,6 @@ public class Q19_TrianglesAndPyramids {
 			}
 			for(int j=0;j<(2*n-(2*(i+1)+1));j++) {
 				System.out.print("*");
-				
 			}
 			System.out.println();
 		}

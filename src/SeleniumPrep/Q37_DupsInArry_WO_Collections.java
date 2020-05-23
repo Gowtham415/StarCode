@@ -42,7 +42,6 @@ public class Q37_DupsInArry_WO_Collections {
 		        dupCount=0;
 		    }
 		}
-
 		System.out.println("\nNumber of duplicates values: " + numDup);
 	}
 }
