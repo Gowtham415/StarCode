@@ -9,7 +9,7 @@ public class Q19_TrianglesAndPyramids {
 		diamond(5);
 	}
 	
-	// Trainagle opf numbers
+	// Triangle of numbers
 	static void triangleOfNumbers(int height) {
 		int val =1;
 		int n =height;
@@ -18,8 +18,7 @@ public class Q19_TrianglesAndPyramids {
 				System.out.print(" ");
 			}
 			for(int j=0;j<(2*i+1);j++) {
-				System.out.print(val);
-				
+				System.out.print(val);			
 			}
 			System.out.println();
 			val++;

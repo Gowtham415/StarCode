@@ -34,8 +34,7 @@ public class Q26_IteratingAList {
 			}
 		}
 		
-	// lambda Expression
-		
+	// lambda Expression	
 		static void method3(List<Integer> list) {		
 			list.forEach(i->System.out.print(i));
 		}
@@ -45,8 +44,7 @@ public class Q26_IteratingAList {
 			Iterator<Integer> itr = list.iterator();
 			while(itr.hasNext()) {
 				System.out.print(itr.next());
-			}
-			
+			}		
 		}
 		
 

@@ -56,7 +56,6 @@ public class Q34_LongestPalinSubstring {
 				// str.charAt(j-1) is a palindrome
 				if (table[i + 1][j - 1] && str.charAt(i) == str.charAt(j)) {
 					table[i][j] = true;
-
 					if (k > maxLength) {
 						start = i;
 						maxLength = k;

@@ -5,6 +5,7 @@ public class Q17_SubStrings {
 	public static void main(String[] args) {
 //		allSubStrings("Gowtham");
 		isASubString("geeks","geeksforgeeks");
+		allSubStrings("Oracle");
 	}
 	// Java program to print all substrings of a string
 

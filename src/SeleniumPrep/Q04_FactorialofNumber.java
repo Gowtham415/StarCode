@@ -21,9 +21,6 @@ public class Q04_FactorialofNumber {
 	public static int factorialDemo2(int n) {
 		if(n==0)
 			return 1;
-		return n * factorialDemo2(n-1);
-		 
+		return n * factorialDemo2(n-1);	 
 	}
-	
-
 }

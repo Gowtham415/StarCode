@@ -61,7 +61,6 @@ private static char firstNonrepeatingChar(char[] arryInt) {
 				}
 		}
 		
-		return ' ';
-			
+		return ' ';	
 	}
 }
