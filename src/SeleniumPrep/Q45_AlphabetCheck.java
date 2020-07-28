@@ -4,7 +4,6 @@ public class Q45_AlphabetCheck {
 
 	public static void main(String[] args) {
 		f6();
-
 	}
 
 	// 6. Alphabet Check
