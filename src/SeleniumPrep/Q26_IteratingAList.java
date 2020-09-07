@@ -3,49 +3,46 @@ package SeleniumPrep;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Q26_IteratingAList {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> intArrList= new ArrayList<>();
-		for(int i=0;i<10;i++) {
-			intArrList.add(i);
-		}	
-		method1(intArrList);	
-		System.out.println();
-		method2(intArrList);
-		System.out.println();
-		method3(intArrList);
-		System.out.println();
-		method4(intArrList);
-	}
-	
-	// For loop
-	static void method1(List<Integer> list) {
-		for(int i=0;i<list.size();i++) {
+		ArrayList<Integer> list = new ArrayList<>();
+		for (int i = 0; i < 10; i++) {
+			list.add(i);
+		}
+
+		// 1. For loop
+		for (int i = 0; i < list.size(); i++) {
 			System.out.print(list.get(i));
 		}
-	}
-	
-	// For each loop
-		static void method2(List<Integer> list) {		
-			for(Integer i:list) {
-				System.out.print(list.get(i));
-			}
-		}
-		
-	// lambda Expression	
-		static void method3(List<Integer> list) {		
-			list.forEach(i->System.out.print(i));
-		}
-		
-	// Using Iterator 
-		static void method4(List<Integer> list) {
-			Iterator<Integer> itr = list.iterator();
-			while(itr.hasNext()) {
-				System.out.print(itr.next());
-			}		
-		}
-		
 
+		// 2. For each loop
+		for (int i : list) {
+			System.out.print(list.get(i));
+		}
+
+		// 3.Lambda Expression
+		list.forEach(i -> System.out.print(i));
+
+		// 4. Using Iterator
+		Iterator<Integer> itr = list.iterator();
+		while (itr.hasNext()) {
+			System.out.print(itr.next());
+		}
+
+		// 5. Method References
+		list.forEach(System.out::print);
+
+		// 6. Consumer - Anonymous Class
+		list.forEach(new Consumer<Integer>() {
+
+			@Override
+			public void accept(Integer t) {
+				System.out.print(t);
+			}
+		});
+
+	}
 }
