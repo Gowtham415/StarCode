@@ -6,7 +6,7 @@ public class Q12_anagramOrNot {
 
 	public static void main(String[] args) {
 		System.out.println(anagramTest("tester","ertest"));
-		System.out.println(anagramTest2("tester","resetfdt"));
+		System.out.println(anagramTest2("tester","testfe"));
 	}
 	
 	// Method 1 
@@ -40,8 +40,11 @@ public class Q12_anagramOrNot {
 		
 		StringBuffer sb = new StringBuffer(str1);
 		for(int i=0;i<str2.length();i++) {
-			int j =sb.toString().indexOf(str2.charAt(i));
-			sb.deleteCharAt(j);
+			int index=0;
+			if((index= sb.toString().indexOf(str2.charAt(i)))!=-1){
+				sb.deleteCharAt(index);
+			}
+			
 		}
 		
 		return sb.toString().isEmpty();

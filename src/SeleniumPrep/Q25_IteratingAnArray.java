@@ -25,7 +25,7 @@ public class Q25_IteratingAnArray {
 		//3rd - While loop
 		System.out.println();
 		int n=0;
-		while(n<=len-1) {
+		while(n<len) {
 			System.out.print(arryEle[n]+" ");
 			n++;
 		}

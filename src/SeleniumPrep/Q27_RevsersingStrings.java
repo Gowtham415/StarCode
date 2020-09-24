@@ -1,11 +1,14 @@
 package SeleniumPrep;
 
+import java.util.stream.Stream;
+
 public class Q27_RevsersingStrings {
 
 	public static void main(String[] args) {
 		reverseofString1("gowtham");
 		reverseofString2("gowtham");
 		reverseofString3("gowtham");
+		reverseofString4("gowtham");
 	}
 	
 	// Logic  1 using + operator
@@ -36,5 +39,12 @@ public class Q27_RevsersingStrings {
 		StringBuffer sb1 = new StringBuffer(str);
 		System.out.println(sb1.reverse());
 	}
+	
+	// Logic 4 using Streams reverse method
+	static void reverseofString4(String str) {
+		int len = str.length();
+		Stream.iterate(len-1, x-> x-1).limit(len).forEach(x -> System.out.print(str.charAt(x)));
+	}
+
 
 }

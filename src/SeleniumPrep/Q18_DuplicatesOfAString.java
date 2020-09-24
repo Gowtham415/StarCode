@@ -19,5 +19,4 @@ public class Q18_DuplicatesOfAString {
 		}
 		System.out.println(sb.toString());
 	}
-
 }

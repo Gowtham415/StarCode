@@ -1,10 +1,13 @@
 package SeleniumPrep;
 
+import java.util.stream.Stream;
+
 public class Q21_PowerofNumber {
 ///21. Calculate power of a number using a while loop
 	public static void main(String[] args) {
 
 		System.out.println(powerofNumber(3, 4));
+		System.out.println(powerOfNumFor(3, 4));
 		System.out.println(powerOfNumFor(3, 4));
 	}
 
@@ -27,4 +30,9 @@ public class Q21_PowerofNumber {
 		}
 		return result;
 	}
+	
+	// using Streams
+		static int powerOfNumStreams(int base, int expo) {
+			return Stream.iterate(expo,x->x-1).reduce(1, (x,y)-> x*base);
+		}
 }
