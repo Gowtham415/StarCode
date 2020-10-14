@@ -1,6 +1,6 @@
 package SeleniumPrep;
 
-public class Q18_DuplicatesOfAString {
+public class Q18_RemoveDuplicatesOfAString {
 //Remove duplicate characters from a String and Print it.
 	public static void main(String[] args) {
 		removeDups("pavankumar");

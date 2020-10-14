@@ -19,7 +19,6 @@ public class Q20_Read_Write_Files {
 	}
 
 	static void readFile(String filePath) {
-
 		String line = null;
 		try (BufferedReader bis = new BufferedReader(new FileReader(new File(filePath)))) {
 			;
@@ -34,7 +33,6 @@ public class Q20_Read_Write_Files {
 	}
 
 	static void writeFile(String filePath) {
-
 		try (BufferedWriter bos = new BufferedWriter(new FileWriter(new File(filePath), true))) {
 			String str = "I am a software Developer";
 			bos.write(str + "\n");

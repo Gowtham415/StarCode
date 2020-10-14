@@ -11,10 +11,10 @@ public class Q11_Strings {
 		String s = str.replaceAll("\\s", "");
 		int len = s.length();
 		System.out.println(s);
-		String strReverse = "";
+		StringBuffer strReverse = new StringBuffer();
 		// For reversing
 		for (int i = (len - 1); i >= 0; i--) {
-			strReverse = strReverse + s.charAt(i);
+			strReverse = strReverse.append(s.charAt(i));
 		}
 
 		System.out.println("Reversed Array:" + strReverse);

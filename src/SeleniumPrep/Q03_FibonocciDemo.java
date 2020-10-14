@@ -6,6 +6,8 @@ public class Q03_FibonocciDemo {
 		System.out.println();
 		System.out.println(fibo2(3));
 		System.out.println(fibo3(5));
+		fiboWithprime(100);
+		
 	}
 
 	// Fibonocci series below 10.
@@ -44,7 +46,33 @@ public class Q03_FibonocciDemo {
 		}else {
 			return fibo3(n-1)+fibo3(n-2);
 		}
+	}
+	
+	
+	//Fibonocci Numbers which are prime
+	public static void fiboWithprime(int n) {
+		int a=0;
+		int b=1;
+		int c=0;
+		while((c=(a+b))<n) {
+			if(isPrime(c)) {
+				System.out.print(c+" ");
+			}
+			a=b;
+			b=c;
+		}
+	}
 
+	private static boolean isPrime(int c) {
+		if(c<2) {
+			return false;
+		}
+		for(int i=2;i<c/2;i++) {
+			if(c%i==0) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 }
