@@ -1,6 +1,11 @@
 package SeleniumPrep;
 
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
+
+/* A perfect number is a number whose sum of divisors is equal to the number
+ */
 
 public class Q02_PerfectNumberOrNot {
 
@@ -43,8 +48,16 @@ public class Q02_PerfectNumberOrNot {
 		}
 	}
 	
-public static boolean perfectOrNot2(int n) {	
+	public static boolean perfectOrNot2(int n) {
 		return Stream.iterate(1, x -> x+1).limit(n/2).filter(x-> n%x==0).reduce(0, (x,y)-> x+y) == n ? true : false;
+	}
+
+	private static boolean isPerfect(int n){
+		if(n<0)
+			return false;
+		int sum = IntStream.rangeClosed(1,n/2).filter(i-> n%i==0).reduce(0,(x, y)->x+y);
+		return sum==n?true:false;
+
 	}
 
 }

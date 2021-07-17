@@ -11,20 +11,11 @@ public class Q14_Occurance {
 	}
 
 	public static void occOfEachChar(String str) {
-		char[] chArry = str.toCharArray();
-		Map<Character, Integer> chMap = new HashMap<Character, Integer>(chArry.length);
-		for (int i = 0; i < chArry.length; i++) {
-			if (chMap.containsKey(chArry[i])) {
-				int value = chMap.get(chArry[i]) + 1;
-				chMap.put(chArry[i], value);
-			} else {
-				chMap.put(chArry[i], 1);
-			}
+		char charArray[] = str.toCharArray();
+		Map<Character, Integer> charMap = new HashMap<Character, Integer>();
+		for (char ch : charArray) {
+			charMap.put(ch, charMap.getOrDefault(ch, 0) + 1);
 		}
-		
-		for(Map.Entry<Character, Integer> entry:chMap.entrySet()) {
-			String s1 = entry.getKey()+"->"+entry.getValue();
-			System.out.println(s1);
-		}
+		charMap.forEach((k, v) -> System.out.println("Key:" + k + " | Value:" + v));
 	}
 }

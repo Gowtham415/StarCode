@@ -1,5 +1,6 @@
 package SeleniumPrep;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -11,24 +12,16 @@ public class Q15_Q16_DuplicateStrings {
 	}
 	
 	public static void duplicateStrings(String str) {
-		String[] strArry = str.split("\\s");
-		int count=0;
-		Map<String,Integer> map = new LinkedHashMap<String,Integer>();
-		for(String s:strArry) {
-			if(map.containsKey(s)) {
-				count = map.get(s)+1;
-				map.put(s,count);
-			}else {
-				map.put(s, 1);
-			}
+		String words[] = str.split("\\s");
+		Map<String,Integer> map = new HashMap<String,Integer>();
+		for(String word:words){
+			map.put(word,map.getOrDefault(word,0)+1);
 		}
-		
-		StringBuffer sb = new StringBuffer();
-		for(Map.Entry<String, Integer> s: map.entrySet()) {
-			System.out.println("'"+s.getKey()+"'"+" is appeared "+s.getValue()+" time/s");
-			sb.append(s.getKey()+" ");
-		}
-		System.out.println("New Statement is:");
-		System.out.println(sb.toString());	
+		map.forEach(
+				(k,v) ->{
+					if(v>1)
+						System.out.println(k+" repeated "+v+" times");
+				}
+		);
 	}
 }

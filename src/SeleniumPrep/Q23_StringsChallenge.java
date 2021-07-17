@@ -11,26 +11,15 @@ public class Q23_StringsChallenge {
 	}
 	
 	public static void getCharCount(String str) {
-
-		StringBuffer sb = new StringBuffer();
-		Map<Character, Integer> charMap = new LinkedHashMap<Character, Integer>(str.length());
-		for (int i = 0; i < str.length(); i++) {
-			char ch = str.charAt(i);
-			if (sb.toString().indexOf(ch) == -1) {
-				sb.append(ch);
-				charMap.put(ch, 1);
-			} else if (sb.toString().indexOf(ch) != -1) {
-				int count = charMap.get(ch);
-				count = count + 1;
-				charMap.put(ch, count);
+			char chArray[] = str.toCharArray();
+			Map<Character,Integer> map = new HashMap<>();
+			for(char c:chArray){
+				map.put(c,map.getOrDefault(c,0)+1);
 			}
-		}
 
-		for (Map.Entry<Character, Integer> s : charMap.entrySet()) {
-			System.out.println(s.getKey() + " :  " + s.getValue());
-		}
+			map.forEach((k,v)-> System.out.println(k+" repeated "+v+" time/s"));
 	}
-	
+
 	public static void getCharCount2(String str) {
 		char[] charArry = str.toCharArray();
 		Map<Character,Integer> charMap = new HashMap<Character,Integer>();
@@ -43,7 +32,7 @@ public class Q23_StringsChallenge {
 				charMap.put(c, 1);
 			}
 		}
-		
+
 		for (Map.Entry<Character, Integer> s : charMap.entrySet()) {
 			System.out.println(s.getKey() + " :  " + s.getValue());
 		}

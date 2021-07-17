@@ -1,5 +1,8 @@
 package SeleniumPrep;
 
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class Q03_FibonocciDemo {
 	public static void main(String[] args) {
 		oneToN(10);
@@ -64,15 +67,9 @@ public class Q03_FibonocciDemo {
 	}
 
 	private static boolean isPrime(int c) {
-		if(c<2) {
+		if(c<2)
 			return false;
-		}
-		for(int i=2;i<c/2;i++) {
-			if(c%i==0) {
-				return false;
-			}
-		}
-		return true;
+		return Stream.iterate(2,x->x+1).limit(c/2).filter(i->c%i==0).findAny().isPresent()?false:true;
 	}
 
 }
