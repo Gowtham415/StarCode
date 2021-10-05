@@ -8,7 +8,6 @@ public class Q33_Anagrams_Strings {
 		anagramStringOrNot("Anagram", "gramana");
 		System.out.println(anagramStringsOrNot("Anagram", "gramana"));
 	}
-
 	// Method 1
 	static void anagramStringOrNot(String str1, String str2) {
 		if (str1.length() != str2.length()) {
