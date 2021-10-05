@@ -12,7 +12,10 @@ public class Q43_SumOfNumbersInStr {
 	
 	static void addNumbersInString(String str) {
 		String words[] = str.split("[a-zA-Z]");
-		int res = Arrays.asList(words).stream().filter(s->!s.equals("")).mapToInt(s->Integer.parseInt(s)).reduce(0,(x, y)->x+y);
+		int res = Arrays.asList(words).stream()
+					.filter(s->!s.equals(""))
+					.mapToInt(s->Integer.parseInt(s))
+					.reduce(0,(x, y)->x+y);
 		System.out.println(res);
 	}
 }

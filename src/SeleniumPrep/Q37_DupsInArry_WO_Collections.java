@@ -20,7 +20,7 @@ public class Q37_DupsInArry_WO_Collections {
 				if(numbers[i]>numbers[j]) {
 					temp=numbers[i];
 					numbers[i]=numbers[j];
-					numbers[j]=temp;
+					numbers[j]=temp;// Swapping Numbers
 				}
 			}
 		}
@@ -28,9 +28,9 @@ public class Q37_DupsInArry_WO_Collections {
 		
 		//After sorting
 		int numDup = 0, dupCount = 0;
-		int previous = Integer.MIN_VALUE;
+		int previousNumber = Integer.MIN_VALUE;
 		for (int i=0; i < numbers.length; ++i) {
-		    if (numbers[i] == previous) {
+		    if (numbers[i] == previousNumber) {
 		            ++dupCount;
 		            if (dupCount == 1) {
 		                System.out.print(numbers[i]+" ");
@@ -38,7 +38,7 @@ public class Q37_DupsInArry_WO_Collections {
 		            }
 		    }
 		    else {
-		        previous = numbers[i];
+				previousNumber = numbers[i];
 		        dupCount=0;
 		    }
 		}

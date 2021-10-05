@@ -1,13 +1,23 @@
 package SeleniumPrep;
 
+import java.util.stream.Stream;
+
 public class Q36_NearestPalindrome {
 
 	public static void main(String[] args) {
 		System.out.println(isPalindrome(1441));
-		System.out.println(nearestpalindrome(126));
+		System.out.println(nearestPalindrome(126));
 		System.out.println(reverseOfNumber(143));
 		System.out.println(isArmstrong(153));
 
+	}
+
+	public static int nearestPalindrome(int n) {
+		int lowerBound;
+		int UpperBound;
+		lowerBound = Stream.iterate(n,s->s-1).filter(num->isPalindrome(num)).findFirst().get();
+		UpperBound = Stream.iterate(n,s->s+1).filter(num->isPalindrome(num)).findFirst().get();
+		return Math.abs(n-lowerBound)>Math.abs(n-UpperBound)?lowerBound:UpperBound;
 	}
 	
 	// To check the nearest palindrome of a given number
@@ -36,6 +46,7 @@ public class Q36_NearestPalindrome {
 				return UpperBound;
 			}
 		}
+
 
 // To check if a number is a palindrome or not.	
 	public static boolean isPalindrome(int n) {

@@ -23,9 +23,6 @@ public class Q46_DaysOfWeek {
 		daysOfWeek.put("Sat",6);
 		
 		return days[(daysOfWeek.get(s)+k)%7];
-		
-		
-		
 	}
 
 }

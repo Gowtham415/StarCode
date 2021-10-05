@@ -14,7 +14,6 @@ public class Q44_ReverseOfWords {
 			System.out.print(temp+" ");
 			temp="";
 		}
-
 	}
 
 }
