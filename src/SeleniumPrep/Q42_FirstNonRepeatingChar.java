@@ -46,13 +46,7 @@ private static char firstNonrepeatingChar(char[] arryInt) {
 		int len = arryInt.length;
 		Map<Character,Integer> mapOfInt= new LinkedHashMap<Character,Integer>(len);
 		for(int i=0;i<len;i++) {
-			if(mapOfInt.containsKey(arryInt[i])) {
-				int val = mapOfInt.get(arryInt[i]);
-				val++;
-				mapOfInt.put(arryInt[i], val);
-			}else {
-				mapOfInt.put(arryInt[i], 1);
-			}
+			mapOfInt.put(arryInt[i],mapOfInt.getOrDefault(arryInt[i],0)+1);
 		}
 		
 		for(Map.Entry<Character, Integer> entry : mapOfInt.entrySet()) {

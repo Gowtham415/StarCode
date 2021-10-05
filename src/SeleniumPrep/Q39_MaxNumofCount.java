@@ -7,7 +7,6 @@ public class Q39_MaxNumofCount {
 	// songs are in an Array {2,4,5,8,4,,10,7,5}
 	public static void main(String[] args) {
 		int[] songs = {2,4,5,8,4,3,10,7,5};
-		
 		System.out.println("Max number of songs:"+maxNumofSongs(songs));
 	}
 

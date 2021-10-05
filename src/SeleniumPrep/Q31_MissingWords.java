@@ -7,7 +7,6 @@ public class Q31_MissingWords {
 
 		String str1 = "I am an honest man with great work ethic";
 		String str2 = "I am an with great work";
-
 		printMissingWords(str1, str2);
 
 	}
