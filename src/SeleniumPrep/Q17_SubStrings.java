@@ -44,4 +44,11 @@ public class Q17_SubStrings {
 		
 		System.out.println(isSubstring);
 	}
+
+
+	private static void isSubstring(String s1,String s2){
+		System.out.println(s2.contains(s1));
+	}
+
+
 }

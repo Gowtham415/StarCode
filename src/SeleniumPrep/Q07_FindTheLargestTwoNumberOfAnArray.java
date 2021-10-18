@@ -13,6 +13,7 @@ public class Q07_FindTheLargestTwoNumberOfAnArray {
 	public static void largestTwo(int[] arr) {
 //		int firstlargest= arr[0];
 //		int secondLargest = arr[1];
+
 		int temp=0;
 	// Bubble sort-- O(n2)	
 		for(int j=0;j<arr.length-1;j++) {
@@ -31,5 +32,7 @@ public class Q07_FindTheLargestTwoNumberOfAnArray {
 		System.out.println("First Highest number is "+arr[arr.length-1]);
 		System.out.println("Second highest number is "+arr[arr.length-2]);
 	}
+
+
 
 }

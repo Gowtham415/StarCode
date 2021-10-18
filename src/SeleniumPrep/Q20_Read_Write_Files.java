@@ -21,7 +21,6 @@ public class Q20_Read_Write_Files {
 	static void readFile(String filePath) {
 		String line = null;
 		try (BufferedReader bis = new BufferedReader(new FileReader(new File(filePath)))) {
-			;
 			while ((line = bis.readLine()) != null) {
 				System.out.println(line);
 			}
