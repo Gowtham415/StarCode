@@ -1,9 +1,11 @@
 package SeleniumPrep;
 
+import java.util.stream.Stream;
+
 public class Q47_PrimeNumber {
 
 	public static void main(String[] args) {
-		System.out.println(isPrime(18));
+		System.out.println(isPrimeWithStreams(19));
 		fibonocciPrimeNumbers(100);
 	}
 
@@ -14,6 +16,10 @@ public class Q47_PrimeNumber {
 			}
 		}
 		return true;
+	}
+
+	private static boolean isPrimeWithStreams(int n){
+		return Stream.iterate(2,i->i+1).limit(n/2).filter(i->n%i==0).findAny().isPresent()?false:true;
 	}
 	
 	

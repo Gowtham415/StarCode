@@ -30,11 +30,7 @@ public class Q02_PerfectNumberOrNot {
 					sum+=i;
 				}
 			}
-			if(sum==n) {
-				return true;
-			}else {
-				return false;	
-			}
+			return sum==n;
 		}
 		
 		return false;

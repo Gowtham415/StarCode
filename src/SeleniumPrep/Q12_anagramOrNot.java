@@ -1,7 +1,7 @@
 package SeleniumPrep;
 
 import java.util.Arrays;
-
+// If String S2 is contained in S1, then S2 is called anagram of anagram of S1
 public class Q12_anagramOrNot {
 
 	public static void main(String[] args) {
@@ -45,7 +45,6 @@ public class Q12_anagramOrNot {
 			if(index!=-1){
 				sb.deleteCharAt(index);
 			}
-			
 		}
 		
 		return sb.toString().isEmpty();
