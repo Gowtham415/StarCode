@@ -1,7 +1,6 @@
 package Basic;
 
 import java.io.*;
-import java.sql.SQLOutput;
 import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -9,46 +8,43 @@ import java.util.stream.Stream;
 public class PracticeTest {
     public static void main(String[] args) {
 
-//        printRandomNumber(10,100);
-//        Stream.iterate(1,i->i+1).limit(100).forEach(s->printRandomNumber(10,100));
-//        System.out.println(isPerfectNumber(28));
-//
-//        printFibonocciSeries(20);
-//        System.out.println();
-//        System.out.println(factorialOfNUm(7));
-//        int[] array = {2,5,15,9,7,14,85,47,19};
-//        doBubbleSort(array);
-//        System.out.println(anagramOrnot("tester","test"));
-//        occOfEachChar("hjekjejbr");
-//        System.out.println(removeDups("pavankumar"));
-//         printATraingle();
-//        printDiamond();
-//        readAfile(filePath);
-//        withOutSpecialChar("812yw*!98!*!E!#J@D!90s02D");
-//        List<Integer> intList = List.of(3,5,7,3);
-//        printOddSum(intList);
+    String s= "hkwje83wdkl27dsej  }}{{kfed88:}";
 
-        String str1 = "I am an honest man with great work ethic";
-        String str2 = "I am an with great work";
-        printMissingWords(str1, str2);
+    String[] strArray = s.split("[^0-9]");
+//        Arrays.stream(strArray).forEach(System.out::println);
+     int result = Arrays.stream(strArray)
+             .filter(str->!str.isEmpty()).map(str->Integer.parseInt(str)).reduce((x, y) -> x + y).get();
+        System.out.println(result);
 
+        String url = "https://www.tradingview.com/chart/tSAfsxCf/?symbol=NSE";
+        String[] specialCharacters= url.split("[a-zA-Z0-9\\s]");
+        Arrays.stream(specialCharacters).forEach(System.out::print);
 
+        System.out.println();
 
-    }
+        String[] nonSpecialCharacters= url.split("[^a-zA-Z0-9\\s]");
+        Arrays.stream(nonSpecialCharacters).forEach(System.out::print);
 
-    private static void printMissingWords(String str1, String str2) {
-        String[] str1Array = str1.split("\\s");
-        boolean exists=false;
-        for(String str:str1Array){
-            if(str2.contains(str)){
-                exists=true;
-            }else{
-                exists=false;
-            }
+        System.out.println();
 
-            if(exists==false)
-                System.out.println(str);
+        String mostRepeatingCharacter = "httpswwwtradingviewcomcharttSAfsxCfsymbolNSE";
+        char[] chars = mostRepeatingCharacter.toCharArray();
+        HashMap<Character,Integer> charMapData = new HashMap<>();
+
+        for(char c:chars){
+                charMapData.put(c,charMapData.getOrDefault(c,0)+1);
         }
+
+        Set<Map.Entry<Character, Integer>> entries = charMapData.entrySet();
+
+        entries.forEach(entry->System.out.println(entry.getKey()+" is repeated "+entry.getValue()+" times "));
+
+        Map.Entry resultChar = entries.stream().max(Comparator.comparing(entry->entry.getValue())).get();
+
+        System.out.println(resultChar.getKey()+" is most repeated, it is repeated "+resultChar.getValue()+" times");
+
+
+
     }
 
     private static void printOddSum(List<Integer> intList) {

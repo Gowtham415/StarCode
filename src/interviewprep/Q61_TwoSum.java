@@ -27,7 +27,7 @@ public class Q61_TwoSum {
 
         for (int i = 0; i < array.length; i++) {
             int k = target - array[i];
-            if (intMap.containsKey(k) && intMap.get(k) != 1) {
+            if (intMap.containsKey(k) && intMap.get(k) != i) {
                 return new int[]{i, intMap.get(k)};
             }
         }

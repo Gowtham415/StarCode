@@ -1,5 +1,9 @@
 package interviewprep;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 //31. Find the missing words by comparing one string with other.
 public class Q31_MissingWords {
 
@@ -7,7 +11,8 @@ public class Q31_MissingWords {
 
 		String str1 = "I am an honest man with great work ethic";
 		String str2 = "I am an with great work";
-		printMissingWords(str1, str2);
+//		printMissingWords(str1, str2);
+		missingWords(str1,str2).forEach(System.out::println);
 
 	}
 
@@ -27,6 +32,14 @@ public class Q31_MissingWords {
 				System.out.println(strTemp);
 			}
 		}
+	}
+
+	private static Set<String> missingWords(String firstLine, String secondLine){
+		Set<String> firstLineSet = new HashSet<String>(Arrays.asList(firstLine.split(" ")));
+		Set<String> secondLineSet = new HashSet<String>(Arrays.asList(secondLine.split(" ")));
+		Set<String> missingWords = new HashSet<String>(firstLineSet);
+		missingWords.removeAll(secondLineSet);
+		return missingWords;
 	}
 
 }

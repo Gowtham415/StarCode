@@ -10,7 +10,7 @@ public class Q59_RightRotatingAnArray {
         System.out.println("Original Array: ");
         printArray(array);
 
-        rotateRight(array, rotations);
+        rotateRightPtr(array, rotations);
 
         System.out.println("Array after " + rotations + " left rotations: ");
         printArray(array);
@@ -34,6 +34,18 @@ public class Q59_RightRotatingAnArray {
             array[end]=temp;
             start++;
             end--;
+        }
+    }
+
+    private static void rotateRightPtr(int[] nums,int rotations){
+        int pointer=0;
+        for(int i=0;i<nums.length;i++){
+            if(i>=nums.length-rotations){
+                int temp = nums[i];
+                nums[i]=nums[pointer];
+                nums[pointer]=temp;
+                pointer++;
+            }
         }
     }
 

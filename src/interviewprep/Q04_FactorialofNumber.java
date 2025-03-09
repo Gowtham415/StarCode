@@ -5,9 +5,11 @@ import java.util.stream.Stream;
 public class Q04_FactorialofNumber {
 
 	public static void main(String[] args) {
-		System.out.println(factorialDemo(5));
-		System.out.println(factorialDemo2(7));
-		System.out.println(factorialDemo3(7));
+//		System.out.println(factorialDemo(5));
+//		System.out.println(factorialDemo2(7));
+//		System.out.println(factorialDemo3(7));
+		System.out.println(factorialDemo4(5));
+		System.out.println(factorialDemo4(10));
 	}
 
 	public static int factorialDemo(int n) {
@@ -27,5 +29,12 @@ public class Q04_FactorialofNumber {
 
 	public static int factorialDemo3(int n) {
 		return Stream.iterate(n, x -> x - 1).limit(n).reduce(1,(x, y) -> (x * y));
+	}
+	
+	
+	public static int factorialDemo4(int num){
+		int n = num;
+		if(n==0 || n==1) return n;
+		return n*factorialDemo4(n-1);
 	}
 }

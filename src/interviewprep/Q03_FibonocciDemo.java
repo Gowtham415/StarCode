@@ -4,11 +4,7 @@ import java.util.stream.Stream;
 
 public class Q03_FibonocciDemo {
 	public static void main(String[] args) {
-		oneToN(10);
-		System.out.println();
-		System.out.println(fibo2(3));
-		System.out.println(fibo3(5));
-		fiboWithprime(100);
+		printFiboNumber(10);
 		
 	}
 
@@ -68,7 +64,19 @@ public class Q03_FibonocciDemo {
 	private static boolean isPrime(int c) {
 		if(c<2)
 			return false;
-		return Stream.iterate(2,x->x+1).limit(c/2).filter(i->c%i==0).findAny().isPresent()?false:true;
+		return !Stream.iterate(2,x->x+1).limit(c/2).filter(i->c%i==0).findAny().isPresent();
+	}
+
+	private static void printFiboNumber(int n){
+		int first = 0;
+		int second = 1;
+		System.out.println(first+"\n"+second);
+		for(int i =2 ; i<n;i++){
+			int next = first + second;
+			first = second;
+			second = next;
+			System.out.println(next);
+		}
 	}
 
 }
